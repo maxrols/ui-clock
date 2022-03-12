@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    font-family: $body-font;
+    background-color: $body-color;
+    color: $text-color;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 968px;
+    margin-left: $mb-1;
+    margin-right: $mb-1;
+}
+
+.grid {
+    display: grid;
+}

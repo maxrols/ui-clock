@@ -1,0 +1,114 @@
+.clock {
+    &__container {
+        height: 100vh;
+        grid-template-rows: 1fr max-content;
+    }
+    &__circle {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        box-shadow: -6px -6px 16px $white-color,
+                    6px 6px 16px hsla($hue, 30%, 86%, 1),
+                    inset 6px 6px 16px hsla($hue, 30%, 86%, 1),
+                    inset -6px -6px 16px $white-color;
+        border-radius: 50%;
+        justify-self: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__content {
+        align-self: center;
+        row-gap: 3.5rem;
+    }
+    &__twelve,
+    &__three,
+    &__six,
+    &__nine {
+        position: absolute;
+        width: 1rem;
+        height: 1px;
+        background-color: $text-color-light;
+    }
+    &__twelve,
+    &__six {
+        transform: translateX(-50%) rotate(90deg);
+    }
+    &__twelve {
+        left: 50%;
+        top: 1.25rem;
+    }
+    &__six {
+        left: 50%;
+        bottom: 1.25rem;
+    }
+    &__three {
+        right: .75rem;
+        top: 50%;
+    }
+    &__nine {
+        left: .75rem;
+        top: 50%;
+    }
+    &__rounder {
+        width: .75rem;
+        height: .75rem;
+        border-radius: 50%;
+        background-color: $first-color;
+        border: 2px solid $body-color;
+        z-index: $z-tooltip;
+    }
+    &__hour,
+    &__minutes,
+    &__seconds {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+    }
+    &__hour {
+        width: 105px;
+        height: 105px;
+        &::before {
+            content: '';
+            position: absolute;
+            background-color: $text-color;
+            width: .25rem;
+            height: 3rem;
+            border-radius: .75rem;
+            z-index: $z-normal;
+        }
+    }
+    &__minutes {
+        width: 136px;
+        height: 136px;
+        &::before {
+            content: '';
+            position: absolute;
+            width: .25rem;
+            height: 4rem;
+            z-index: $z-normal;
+            background-color: $text-color;
+            border-radius: .75rem;
+        }
+    }
+    &__seconds {
+        width: 130px;
+        height: 130px;
+        &::before {
+            content: '';
+            width: .125rem;
+            height: 5rem;
+            background-color: $first-color;
+            z-index: $z-normal;
+            border-radius: .75rem;
+        }
+    }
+    &__logo {
+        width: max-content;
+        justify-self: center;
+        font-size: $smaller-font-size;
+        font-weight: $font-medium;
+        color: $text-color-light;
+        transition: .3s;
+    }
+}
