@@ -110,5 +110,27 @@
         font-weight: $font-medium;
         color: $text-color-light;
         transition: .3s;
+        margin-bottom: 3rem;
+    }
+    &__text {
+        display: flex;
+        justify-content: center;
+    }
+    &__text_hour,
+    &__text_minutes {
+        font-size: $biggest-font-size;
+        font-weight: $font-medium;
+        color: $title-color;
+    }
+    &__text_ampm {
+        font-weight: $font-medium;
+        color: $title-color;
+        font-size: $tiny-font-size;
+        margin-left: $mb-0-25;
+    }
+    &__date {
+        text-align: center;
+        font-weight: $font-medium;
+        font-size: $small-font-size;
     }
 }
